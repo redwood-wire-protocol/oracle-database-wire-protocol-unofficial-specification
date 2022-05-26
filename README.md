@@ -303,6 +303,10 @@ This is the first packet used to establish a TNS-level connection to Oracle Data
 
 - 5.x – Current
 
+###### Direction
+
+- Client to Server
+
 ###### Comments
 
 - As one would expect, just as it is sent from the client to the server, this packet is also used in server-to-server communications for items such as database links.
@@ -395,9 +399,67 @@ nspcndat
 
 ##### 0x07 - NuLl (NSPTNL)
 
+###### Purpose
+
+This packet is a no-op used to keep a connection alive.
+
+###### Versions
+
+- 5.x – Current
+
+###### Direction
+
+- Client to Server
+- Server to Client?
+
+###### Comments
+
+- While this has only been seen sent from server to client, it could, theoretically, be sent in either direction.
+
+###### Rules
+
+###### Definition
+
+###### Details
+
+- This packet has no data and is simply identified by the packet type in the TNS packet header.
+
+###### Response Packets
+
+None.
+
 ##### 0x09 - ABort (NSPTAB)
 
 ##### 0x0b - ReSend (NSPTRS)
+
+###### Purpose
+
+This packet is used to request retransmission of the previous TNS packet.
+
+###### Versions
+
+- 5.x – Current
+
+###### Direction
+
+- Client to Server
+- Server to Client?
+
+###### Comments
+
+- While this has only been seen sent from server to client, it could, theoretically, be sent in either direction.
+
+###### Rules
+
+###### Definition
+
+###### Details
+
+- This packet has no data and is simply identified by the packet type in the TNS packet header.
+
+###### Response Packets
+
+Previous TNS packet transmitted.
 
 ##### 0x0c - MarKer (NSPTMK)
 
