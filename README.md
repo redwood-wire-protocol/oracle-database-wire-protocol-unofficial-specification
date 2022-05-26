@@ -295,6 +295,94 @@
 
 ##### 0x01 - CoNnect (NSPTCN)
 
+###### Purpose
+
+This is the first packet used to establish a TNS-level connection to Oracle Database.
+
+###### Versions
+
+- 5.x – Current
+
+###### Comments
+
+- As one would expect, just as it is sent from the client to the server, this packet is also used in server-to-server communications for items such as database links.
+
+###### Rules
+
+```
+nspcnvsn      = uint16_t
+nspcnlov      = uint16_t
+nspcnopt      = uint16_t
+nspcnsdu      = uint16_t
+nspcntdu      = uint16_t
+nspcnntc      = uint16_t
+nspcntna      = uint16_t
+nspcnone      = uint16_t
+nspcnlen      = uint16_t
+nspcnoff      = uint16_t
+nspcnmxc      = uint32_t
+nspcnfl0      = uint8_t
+nspcnfl1      = uint8_t
+nspcncf1      = uint32_t
+nspcncf2      = uint32_t
+nspcncid      = uint8_t[8]
+nspcncix      = uint8_t[8]
+nspcndat      = ng_buffer_h[nspcnlen]
+```
+
+###### Definition
+
+```
+nspcnvsn
+nspcnlov
+nspcnopt
+nspcnsdu
+nspcntdu
+nspcnntc
+nspcntna
+nspcnone
+nspcnlen
+nspcnoff
+nspcnmxc
+nspcnfl0
+nspcnfl1
+nspcncf1
+nspcncf2
+nspcncid
+nspcncix
+nspcndat
+```
+
+###### Details
+
+| Parameter | Description |
+|-----------|-------------|
+| nspcnvsn | Packet Version |
+| nspcnlov | Lowest Compatible Version |
+| nspcnopt | Supports Global Service Options |
+| nspcnsdu | Session Data Unit Size (in bytes) |
+| nspcntdu | Transport Data Unit Size (in bytes) |
+| nspcnntc | NT Protocol Characteristics |
+| nspcntna | Line Turnaround Value |
+| nspcnone | The number 1 in Host Byte Order |
+| nspcnlen | Length of Connect Data (in bytes) |
+| nspcnoff | Byte Offset to Connect Data |
+| nspcnmxc | Maximum Connect Data |
+| nspcnfl0 | Connect Flags 0 |
+| nspcnfl1 | Connect Flags 1 |
+| nspcncf1 | Cross Facility Item 1 |
+| nspcncf2 | Cross Facility Item 2 |
+| nspcncid | Unique Connection Id |
+| nspcncix | Unique Connection Id |
+| nspcndat | Connect Data (in Oracle NVP format) |
+
+###### Response Packets
+
+- NSPTRS
+- NSPTRD
+- NSPTRF
+- NSPTAC
+
 ##### 0x02 - ACcept (NSPTAC)
 
 ##### 0x03 - AcKnowledge (NSPTAK)
