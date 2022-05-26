@@ -1,6 +1,6 @@
 # Unofficial Protocol Specification for Oracle Database
 
-> **DISCLAIMER:** I am an independent developer. While I have spoken about [Oracle Database](https://www.oracle.com/database/) at many conferences, including Oracle OpenWorld, I have never worked for, and this specification is in no way affiliated with, [Oracle Corporation](https://www.oracle.com/).
+> **DISCLAIMER:** I, Jonah H. Harris, am an independent developer. While I have spoken about [Oracle Database](https://www.oracle.com/database/) at many conferences, including Oracle OpenWorld, I have never worked for, and this specification is in no way affiliated with, [Oracle Corporation](https://www.oracle.com/).
 > 
 > ***All information provided here is based on personal research; it is not supported or recommended by Oracle Corporation.***
 
